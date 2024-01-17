@@ -1,0 +1,17 @@
+section{
+  display: flex;
+}
+
+.Card{
+  height: 200px;
+  width: 25%;
+  background-color:burlywood;
+  margin: 20px;
+  padding: 10px;
+}
+.icon{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: azure;
+}
