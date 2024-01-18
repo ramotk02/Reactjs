@@ -1,6 +1,7 @@
 import "./App.css";
 
 const students = [
+
   {
     name: "Omar",
     age: 20,
