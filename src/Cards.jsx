@@ -1,4 +1,5 @@
 import React from 'react';
+import pic from "./assests/pic/Logo.png";
 
 const students = [
   {
@@ -43,7 +44,10 @@ const CardItem = (props) => {
   return (
     <section className=' flex justify-center m-[20px] '>
       <div className="Card h-[200px] w[25%] bg-[#0101] rounded-lg p-[20px]" >
-        <div className="icon h-[60px] w-[60px] rounded-full bg-[#f9f7f4 ]"></div>
+        <div className="icon h-[60px] w-[60px] rounded-full bg-[#f9f7f4 ]">
+        <img src={pic} alt="gmc-pic" />
+
+        </div>
         <p className='text-xl'>{props.name || "Incognito"}</p>
         <p>{props.age || "None"}</p>
         <p>{props.status || "None"}</p>
