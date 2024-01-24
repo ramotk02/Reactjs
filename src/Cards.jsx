@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import pic from "./assests/pic/Logo.png";
 
 const students = [
@@ -26,15 +26,31 @@ const students = [
     status: "Student",
     text: "ggjierfv ghuerighurehogfr greufio g eergurwi greuwigoeo greuger egergiopfsg ueor vjfgve",
   },
+  {
+    name: "Yassine",
+    age: 25,
+    status: "Teacher",
+    text: "ggjierfv ghuerighurehogfr greufio g eergurwi greuwigoeo greuger egergiopfsg ueor vjfgve",
+  },
+  {
+    name: "",
+    age: 20,
+    status: "",
+    text: "ggjierfv ghuerighurehogfr greufio g eergurwi greuwigoeo greuger egergiopfsg ueor vjfgve",
+  },
 ];
-  
-
 
 const Cards = (props) => {
   return (
-    <div className="big-container" >
+    <div className="big-container grid grid-cols-3">
       {students.map((item, index) => (
-        <CardItem key={index} name={item.name} age={item.age} status={item.status} text={item.text} />
+        <CardItem
+          key={index}
+          name={item.name}
+          age={item.age}
+          status={item.status}
+          text={item.text}
+        />
       ))}
     </div>
   );
@@ -42,13 +58,12 @@ const Cards = (props) => {
 
 const CardItem = (props) => {
   return (
-    <section className=' flex justify-center m-[20px] '>
-      <div className="Card h-[200px] w[25%] bg-[#0101] rounded-lg p-[20px]" >
+    <section className=" flex justify-center m-[20px] ">
+      <div className="Card h-[200px]  bg-[#0101] rounded-lg p-[10px]">
         <div className="icon h-[60px] w-[60px] rounded-full bg-[#f9f7f4 ]">
-        <img src={pic} alt="gmc-pic" />
-
+          <img src={pic} alt="gmc-pic" />
         </div>
-        <p className='text-xl'>{props.name || "Incognito"}</p>
+        <p className="text-xl">{props.name || "Incognito"}</p>
         <p>{props.age || "None"}</p>
         <p>{props.status || "None"}</p>
         <p>{props.text || "None"}</p>
