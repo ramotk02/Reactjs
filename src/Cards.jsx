@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import pic from "./assests/pic/Logo.png";
+import Button from "./Button";
 
 const students = [
   {
@@ -40,37 +41,49 @@ const students = [
   },
 ];
 
-const Cards = (props) => {
-  return (
-    <div className="big-container grid grid-cols-3">
-      {students.map((item, index) => (
-        <CardItem
-          key={index}
-          name={item.name}
-          age={item.age}
-          status={item.status}
-          text={item.text}
-        />
-      ))}
-    </div>
-  );
-};
+// const Cards = () => {
+//   const [firstName, setFirstName] = useState("Omar");
 
-const CardItem = (props) => {
+//   const handleClick = () => {
+//     setFirstName("Rashid");
+//   };
+
+//   return (
+    
+// <div>
+//   <div className="big-container grid grid-cols-3">
+//       {students.map((item) => (
+//         <CardItem
+//           key={item.name} 
+//           name={item.name}
+//           age={item.age}
+//           status={item.status}
+//           text={item.text}
+//         />
+//       ))}
+//       {/* <CardItem name={firstName}/> */}
+//   </div>
+//       {/* <Button handleClick={handleClick} /> */}
+//       </div>
+//   );
+// };
+
+const CardItem = ({ name, age, status, text, children }) => {
   return (
-    <section className=" flex justify-center m-[20px] ">
-      <div className="Card h-[200px]  bg-[#0101] rounded-lg p-[10px]">
-        <div className="icon h-[60px] w-[60px] rounded-full bg-[#f9f7f4 ]">
+    <section className="flex justify-center m-[20px]">
+      <div className="Card h-[200px] bg-[#0101] rounded-lg p-[10px]">
+        <div className="icon h-[60px] w-[60px] rounded-full bg-[#f9f7f4]">
           <img src={pic} alt="gmc-pic" />
         </div>
-        <p className="text-xl">{props.name || "Incognito"}</p>
-        <p>{props.age || "None"}</p>
-        <p>{props.status || "None"}</p>
-        <p>{props.text || "None"}</p>
+        <p className="text-xl">{name || "Incognito"}</p>
+        <p>{children}</p>
+        <p>{age || "None"}</p>
+        <p>{status || "None"}</p>
+        <p>{text || "None"}</p>
       </div>
-      <style></style>
+      <p>TEST</p>
     </section>
   );
 };
 
-export default Cards;
+// export default Cards;

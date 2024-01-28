@@ -2,6 +2,7 @@ import Header from "./Header";
 import Button from "./Button";
 import Cards from "./Cards";
 import Home from "./Home";
+import { Children } from "react";
 
 
 function App() {
@@ -9,8 +10,7 @@ function App() {
     <section>
       <Header />
       <Home />
-      <Cards/>
-      <Button/>
+      {/* <Cards/> */}
     </section>
     
   );
